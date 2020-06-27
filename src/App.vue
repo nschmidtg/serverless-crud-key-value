@@ -50,7 +50,6 @@ export default {
     }
   },
   created () {
-    console.log(process.env.VUE_APP_IDENTITY)
     this.docClient = new AWS.DynamoDB.DocumentClient({
       apiVersion: this.apiVersion
     })
