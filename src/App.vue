@@ -29,10 +29,10 @@
 import Item from './components/Item'
 const AWS = require('aws-sdk')
 // Set the region where your identity pool exists
-AWS.config.region = 'us-east-1'
+AWS.config.region = 'REGION_OF_YOUR_IDENTITY_POOL'
 // Configure the credentials provider to use your identity pool
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: 'us-east-1:e6259c06-bd3b-4293-aadb-ba0e093a7482'
+  IdentityPoolId: 'YOUR_AWS_COGNITO_IDENTITY_POOL_ID'
 })
 export default {
   components: {
@@ -44,7 +44,7 @@ export default {
       key: '',
       value: '',
       items: [],
-      tableName: 'generic_key_value',
+      tableName: 'YOUR_DYNAMODB_TABLE_NAME',
       apiVersion: '2012-08-10',
       docClient: null
     }
